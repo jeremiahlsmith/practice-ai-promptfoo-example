@@ -1,0 +1,14 @@
+description: "AI Health Billing Classification"
+
+prompts:
+  - "./prompts/classify-account-v1.j2"
+  - "./prompts/classify-account-v2.j2"
+
+providers:
+  - "openai:gpt-4o-mini"
+  - "openai:gpt-4o"
+  # - "openai:gpt-4" # expensive $0.04 per 1K tokens
+  - "openai:gpt-3.5-turbo"
+  - "openai:gpt-3.5-turbo-16k"
+
+tests: "./test-cases.yaml"

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "promptfoo": "^0.117.1"
+  },
+  "scripts": {
+    "eval": "promptfoo eval -c src/promptfooconfig.yaml; promptfoo view -y",
+    "view": "promptfoo view -y"
+  }
+}

@@ -1,0 +1,135 @@
+- description: "Guarantor hasn't responded since March 3rd."
+  vars:
+    notes: |
+      Guarantor hasn't responded since March 3rd.
+  assert:
+    - type: equals
+      value: '{ "classification": "awaiting_guarantor" }'
+
+- description: "Payer denied claim due to missing documentation."
+  vars:
+    notes: |
+      Payer denied claim due to missing documentation.
+  assert:
+    - type: equals
+      value: '{ "classification": "claim_denied" }'
+
+- description: "Patient called to request payment plan options."
+  vars:
+    notes: |
+      Patient called to request payment plan options.
+  assert:
+    - type: equals
+      value: '{ "classification": "patient_inquiry" }'
+
+- description: "Insurance approved the claim, awaiting payment."
+  vars:
+    notes: |
+      Insurance approved the claim, awaiting payment.
+  assert:
+    - type: equals
+      value: '{ "classification": "awaiting_payment" }'
+
+- description: "Patient paid balance in full on May 1st."
+  vars:
+    notes: |
+      Patient paid balance in full on May 1st.
+  assert:
+    - type: equals
+      value: '{ "classification": "paid_in_full" }'
+
+- description: "Account sent to collections after 90 days of non-payment."
+  vars:
+    notes: |
+      Account sent to collections after 90 days of non-payment.
+  assert:
+    - type: equals
+      value: '{ "classification": "sent_to_collections" }'
+
+- description: "Provider requested additional information from patient."
+  vars:
+    notes: |
+      Provider requested additional information from patient.
+  assert:
+    - type: equals
+      value: '{ "classification": "provider_pending" }'
+
+- description: "Payment was partially received, balance remains."
+  vars:
+    notes: |
+      Payment was partially received, balance remains.
+  assert:
+    - type: equals
+      value: '{ "classification": "partial_payment" }'
+
+- description: "Claim denied due to non-covered service."
+  vars:
+    notes: |
+      Claim denied due to non-covered service.
+  assert:
+    - type: equals
+      value: '{ "classification": "claim_denied" }'
+
+- description: "Account under review for possible fraud."
+  vars:
+    notes: |
+      Account under review for possible fraud.
+  assert:
+    - type: equals
+      value: '{ "classification": "under_fraud_review" }'
+
+- description: "Insurance overpaid, refund issued to payer."
+  vars:
+    notes: |
+      Insurance overpaid, refund issued to payer.
+  assert:
+    - type: equals
+      value: '{ "classification": "refund_issued" }'
+
+- description: "Patient requested itemized bill."
+  vars:
+    notes: |
+      Patient requested itemized bill.
+  assert:
+    - type: equals
+      value: '{ "classification": "itemized_bill_requested" }'
+
+- description: "Payment plan established, first payment received."
+  vars:
+    notes: |
+      Payment plan established, first payment received.
+  assert:
+    - type: equals
+      value: '{ "classification": "payment_plan_active" }'
+
+- description: "Claim appeal submitted by provider."
+  vars:
+    notes: |
+      Claim appeal submitted by provider.
+  assert:
+    - type: equals
+      value: '{ "classification": "claim_appeal_submitted" }'
+
+- description: "Account closed due to inactivity."
+  vars:
+    notes: |
+      Account closed due to inactivity.
+  assert:
+    - type: equals
+      value: '{ "classification": "account_closed" }'
+
+- description: "Guarantor deceased, estate contacted."
+  vars:
+    notes: |
+      Guarantor deceased, estate contacted.
+  assert:
+    - type: equals
+      value: '{ "classification": "guarantor_deceased" }'
+
+- description: "Insurance information updated by patient."
+  vars:
+    notes: |
+      Insurance information updated by patient.
+  assert:
+    - type: equals
+      value: '{ "classification": "insurance_info_updated" }'
