@@ -2,26 +2,7 @@ Account Notes:
 {{ notes }}
 
 Please classify the account status as one of:
-- awaiting_guarantor
-- payer_pending
-- likely_writeoff
-- needs_manual_review
-- patient_inquiry
-- claim_resubmitted
-- awaiting_payment
-- paid_in_full
-- sent_to_collections
-- provider_pending
-- partial_payment
-- claim_denied
-- under_fraud_review
-- refund_issued
-- itemized_bill_requested
-- payment_plan_active
-- claim_appeal_submitted
-- account_closed
-- guarantor_deceased
-- insurance_info_updated
+{{ classification_list }}
 
 Return only JSON structure as plain text:
 { "classification": "<value>" }
