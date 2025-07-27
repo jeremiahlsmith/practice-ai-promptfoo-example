@@ -29,6 +29,10 @@ package.json, pyproject.toml, mise.toml, uv.lock # Environment/config files
 
 ## How to Use
 
+> [!Note]
+> **Set env vars for API keys**
+> by creating .env file for API keys and run `export $(cat .env | xargs)` to set
+
 1. **Edit Prompts:** Change `src/prompts/classify-account-v1.j2` to try new prompt ideas.
 2. **Add Test Cases:** Add or update scenarios in `src/test-cases.yaml` to practice with new situations and outputs.
 3. **Run Evaluations:** Use [promptfoo](https://github.com/promptfoo/promptfoo) or your own scripts to run the test cases and see how your prompts perform.

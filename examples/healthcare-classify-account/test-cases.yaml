@@ -4,7 +4,7 @@
       Guarantor hasn't responded since March 3rd.
   assert:
     - type: equals
-      value: '{ "classification": "awaiting_guarantor" }'
+      value: awaiting_guarantor
 
 - description: "Payer denied claim due to missing documentation."
   vars:
@@ -12,7 +12,7 @@
       Payer denied claim due to missing documentation.
   assert:
     - type: equals
-      value: '{ "classification": "claim_denied" }'
+      value: claim_denied
 
 - description: "Patient called to request payment plan options."
   vars:
@@ -20,7 +20,16 @@
       Patient called to request payment plan options.
   assert:
     - type: equals
-      value: '{ "classification": "patient_inquiry" }'
+      value: payment_plan_requested
+
+
+- description: "Patient called to request further information."
+  vars:
+    notes: |
+      Patient called to request further information.
+  assert:
+    - type: equals
+      value: patient_inquiry
 
 - description: "Insurance approved the claim, awaiting payment."
   vars:
@@ -28,7 +37,7 @@
       Insurance approved the claim, awaiting payment.
   assert:
     - type: equals
-      value: '{ "classification": "awaiting_payment" }'
+      value: awaiting_payment
 
 - description: "Patient paid balance in full on May 1st."
   vars:
@@ -36,7 +45,7 @@
       Patient paid balance in full on May 1st.
   assert:
     - type: equals
-      value: '{ "classification": "paid_in_full" }'
+      value: paid_in_full
 
 - description: "Account sent to collections after 90 days of non-payment."
   vars:
@@ -44,7 +53,7 @@
       Account sent to collections after 90 days of non-payment.
   assert:
     - type: equals
-      value: '{ "classification": "sent_to_collections" }'
+      value: sent_to_collections
 
 - description: "Provider requested additional information from patient."
   vars:
@@ -52,7 +61,7 @@
       Provider requested additional information from patient.
   assert:
     - type: equals
-      value: '{ "classification": "provider_pending" }'
+      value: provider_pending
 
 - description: "Payment was partially received, balance remains."
   vars:
@@ -60,7 +69,7 @@
       Payment was partially received, balance remains.
   assert:
     - type: equals
-      value: '{ "classification": "partial_payment" }'
+      value: partial_payment
 
 - description: "Claim denied due to non-covered service."
   vars:
@@ -68,7 +77,7 @@
       Claim denied due to non-covered service.
   assert:
     - type: equals
-      value: '{ "classification": "claim_denied" }'
+      value: claim_denied
 
 - description: "Account under review for possible fraud."
   vars:
@@ -76,7 +85,7 @@
       Account under review for possible fraud.
   assert:
     - type: equals
-      value: '{ "classification": "under_fraud_review" }'
+      value: under_fraud_review
 
 - description: "Insurance overpaid, refund issued to payer."
   vars:
@@ -84,7 +93,7 @@
       Insurance overpaid, refund issued to payer.
   assert:
     - type: equals
-      value: '{ "classification": "refund_issued" }'
+      value: refund_issued
 
 - description: "Patient requested itemized bill."
   vars:
@@ -92,7 +101,7 @@
       Patient requested itemized bill.
   assert:
     - type: equals
-      value: '{ "classification": "itemized_bill_requested" }'
+      value: itemized_bill_requested
 
 - description: "Payment plan established, first payment received."
   vars:
@@ -100,7 +109,7 @@
       Payment plan established, first payment received.
   assert:
     - type: equals
-      value: '{ "classification": "payment_plan_active" }'
+      value: payment_plan_active
 
 - description: "Claim appeal submitted by provider."
   vars:
@@ -108,7 +117,7 @@
       Claim appeal submitted by provider.
   assert:
     - type: equals
-      value: '{ "classification": "claim_appeal_submitted" }'
+      value: claim_appeal_submitted
 
 - description: "Account closed due to inactivity."
   vars:
@@ -116,7 +125,7 @@
       Account closed due to inactivity.
   assert:
     - type: equals
-      value: '{ "classification": "account_closed" }'
+      value: account_closed
 
 - description: "Guarantor deceased, estate contacted."
   vars:
@@ -124,7 +133,7 @@
       Guarantor deceased, estate contacted.
   assert:
     - type: equals
-      value: '{ "classification": "guarantor_deceased" }'
+      value: guarantor_deceased
 
 - description: "Insurance information updated by patient."
   vars:
@@ -132,4 +141,4 @@
       Insurance information updated by patient.
   assert:
     - type: equals
-      value: '{ "classification": "insurance_info_updated" }'
+      value: insurance_info_updated

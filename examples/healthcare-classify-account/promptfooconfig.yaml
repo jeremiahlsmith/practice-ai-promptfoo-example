@@ -10,11 +10,22 @@ providers:
   - "openai:gpt-4o"
   - "openai:gpt-3.5-turbo"
   - "openai:gpt-3.5-turbo-16k"
+  - "anthropic:messages:claude-sonnet-4-20250514"
+  - "anthropic:messages:claude-3-5-sonnet-20241022"
+  - "anthropic:messages:claude-3-5-haiku-20241022"
+  - "deepseek:deepseek-chat"
 
 tests:
   - "./test-cases.yaml"
 
 defaultTest:
+  options:
+    transform: |
+      try {
+          return JSON.parse(output).classification;
+        } catch (e) {
+          return output;
+        }
   vars:
     classification_list: |
       - awaiting_guarantor
@@ -33,6 +44,7 @@ defaultTest:
       - refund_issued
       - itemized_bill_requested
       - payment_plan_active
+      - payment_plan_requested
       - claim_appeal_submitted
       - account_closed
       - guarantor_deceased
