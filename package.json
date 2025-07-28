@@ -3,7 +3,7 @@
     "promptfoo": "^0.117.1"
   },
   "scripts": {
-    "eval": "promptfoo eval -c src/promptfooconfig.yaml; promptfoo view -y",
+    "eval": "promptfoo eval -c examples/healthcare-classify-account/promptfooconfig.yaml --prmopts examples/healthcare-classify-account/prompts/classify-account-v3.j2; promptfoo view -y",
     "view": "promptfoo view -y"
   }
 }
