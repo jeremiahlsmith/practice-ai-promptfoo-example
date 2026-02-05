@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "promptfoo": "^0.117.1"
+    "promptfoo": "^0.120.20"
   },
   "scripts": {
     "eval": "promptfoo eval -c examples/healthcare-classify-account/promptfooconfig.yaml --prmopts examples/healthcare-classify-account/prompts/classify-account-v3.j2; promptfoo view -y",
